@@ -3,12 +3,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'dotnet build "F:/Code/Assign 2/WcfServiceLibrary1/WcfServiceLibrary1/WcfServiceLibrary1.sln"'
+                bat 'dotnet build ./API WCF/MyApiProject/MyApiProject.sln'
+                bat 'dotnet build ./GRPC/GRPC.sln'
             }
         }
         stage('Test') {
             steps {
-                bat 'dotnet test "F:/Code/Assign 2/WcfServiceLibrary1/WcfServiceLibrary1/WcfServiceLibrary1.sln"'
+                // Specify each solution or test project file explicitly
+                bat 'dotnet test ./API WCF/MyApiProject/MyApiProject.sln'
+                bat 'dotnet test ./GRPC/GRPC.sln'
             }
         }
         stage('Docker Build') {
