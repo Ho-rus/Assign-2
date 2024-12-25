@@ -1,0 +1,6 @@
+@WcfServiceLibrary1_HostAddress = http://localhost:5008
+
+GET {{WcfServiceLibrary1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
