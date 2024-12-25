@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'dotnet build SimpleGrpcProject.sln'
+                sh 'dotnet build WcfServiceLibrary1.sln'
             }
         }
         stage('Test') {
