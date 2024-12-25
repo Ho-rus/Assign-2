@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'dotnet build "F:/Code/Assign 2/WcfServiceLibrary1/WcfServiceLibrary1.sln"'
+                sh 'dotnet build "F:/Code/Assign 2/WcfServiceLibrary1/WcfServiceLibrary1/WcfServiceLibrary1.sln"'
             }
         }
         stage('Test') {
             steps {
-                bat 'dotnet test'
+                sh 'dotnet test "F:/Code/Assign 2/WcfServiceLibrary1/WcfServiceLibrary1/WcfServiceLibrary1.sln"'
             }
         }
         stage('Docker Build') {
