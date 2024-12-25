@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'dotnet build WcfServiceLibrary1.sln'
+                bat 'dotnet build ./WcfServiceLibrary1/WcfServiceLibrary1.sln'
             }
         }
         stage('Test') {
